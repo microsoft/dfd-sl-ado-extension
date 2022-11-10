@@ -1,0 +1,10 @@
+steps:
+- task: Bash@3
+  displayName: MDC Security Decorator
+  timeoutInMinutes: 1
+  condition: always()
+  continueOnError: true
+  inputs:
+    targetType: 'inline'
+    script: | 
+      (docker images --digests --format "{{.Repository}}\t{{.Digest}}") || true

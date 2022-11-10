@@ -1,14 +1,10 @@
-# Project
+# ADO Extension for Shift-Left in Defender for DevOps
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repo contains the code for the ADO private extension that is installed on the customer's organization for injecting the scripts used to calculate the diff of the digests that were deployed as part of a pipeline run.
 
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+More information on ADO extensions - 
+https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-pipeline-decorator?view=azure-devops
+https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azure-devops
 
 ## Contributing
 
@@ -23,6 +19,15 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+### Testing changes on local environment 
+
+1. Once the changes are commited, Update the file vss-etension.json and the version
+2. From PowerShell/bash shell, run from the etension root directory 
+    > npx tfx-cli extension create
+3) Publish and share the extension from marketplace
+`https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
+4) from ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
 
 ## Trademarks
 

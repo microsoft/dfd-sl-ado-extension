@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 1,
+    "id": "MDCExtension",
+    "publisher": "LaveeshRohra",
+    "version": "1.0.0",
+    "name": "MDC Security Decorators Extension",
+    "description": "MDC Security Decorators",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "categories": [
+        "Azure Pipelines"
+    ],
+	"contributions": [
+        {
+            "id": "MSDSecurityStartDecorator",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.pre-job-tasks"
+            ],
+            "properties": {
+                "template": "MDCDecorator/MDCDecorator.yml"
+            }
+        },
+		{
+            "id": "MSDSecurityEndDecorator",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.post-job-tasks"
+            ],
+            "properties": {
+                "template": "MDCDecorator/MDCDecorator.yml"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "MDCDecorator/MDCDecorator.yml",
+            "addressable": true,
+            "contentType": "text/plain"
+        }
+    ]
+}
