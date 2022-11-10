@@ -1,0 +1,10 @@
+steps:
+- task: Bash@3
+  displayName: ADO Filter Start
+  timeoutInMinutes: 1
+  condition: always()
+  continueOnError: true
+  inputs:
+    targetType: 'inline'
+    script: | 
+      time ( first=$(docker images --format "{{.ID}}" | head -n 1); echo "##vso[task.setvariable variable=firstDocker;isreadonly=true]$first" )

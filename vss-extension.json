@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "SlAdoTimeBasedExtension",
+    "id": "SlAdoFilterExtension",
     "publisher": "LaveeshRohra",
-    "version": "1.0.3",
-    "name": "Time based Shift Left extension",
-    "description": "Filtering based on time",
+    "version": "1.0.1",
+    "name": "Shift-Left ADO Filter Extension",
+    "description": "Extension that uses docker filter command",
     "public": false,
     "targets": [
         {
@@ -15,6 +15,16 @@
         "Azure Pipelines"
     ],
 	"contributions": [
+        {
+            "id": "MSDSecurityStartDecorator",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.pre-job-tasks"
+            ],
+            "properties": {
+                "template": "MDCDecorator/MDCDecoratorStart.yml"
+            }
+        },
 		{
             "id": "MSDSecurityEndDecorator",
             "type": "ms.azure-pipelines.pipeline-decorator",
@@ -22,13 +32,18 @@
                 "ms.azure-pipelines-agent-job.post-job-tasks"
             ],
             "properties": {
-                "template": "MDCDecorator/MDCDecorator.yml"
+                "template": "MDCDecorator/MDCDecoratorEnd.yml"
             }
         }
     ],
     "files": [
         {
-            "path": "MDCDecorator/MDCDecorator.yml",
+            "path": "MDCDecorator/MDCDecoratorStart.yml",
+            "addressable": true,
+            "contentType": "text/plain"
+        },
+        {
+            "path": "MDCDecorator/MDCDecoratorEnd.yml",
             "addressable": true,
             "contentType": "text/plain"
         }
