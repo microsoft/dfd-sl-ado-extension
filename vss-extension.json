@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "SlAdoTimeBasedExtension",
+    "id": "MDCExtension",
     "publisher": "LaveeshRohra",
-    "version": "1.0.3",
-    "name": "Time based Shift Left extension",
-    "description": "Filtering based on time",
+    "version": "1.0.6",
+    "name": "MDC Security Decorators Extension",
+    "description": "MDC Security Decorators",
     "public": false,
     "targets": [
         {
@@ -15,6 +15,16 @@
         "Azure Pipelines"
     ],
 	"contributions": [
+        {
+            "id": "MSDSecurityStartDecorator",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.pre-job-tasks"
+            ],
+            "properties": {
+                "template": "MDCDecorator/MDCDecorator.yml"
+            }
+        },
 		{
             "id": "MSDSecurityEndDecorator",
             "type": "ms.azure-pipelines.pipeline-decorator",
