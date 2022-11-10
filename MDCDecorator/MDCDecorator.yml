@@ -7,4 +7,4 @@ steps:
   inputs:
     targetType: 'inline'
     script: | 
-      (time docker images --digests --format "{{.Repository}}\t{{.Digest}}")
+      (docker images --digests --format "{{.Repository}}\t{{.Digest}}") || true

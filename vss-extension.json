@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "MDCExtension",
     "publisher": "LaveeshRohra",
-    "version": "1.0.6",
+    "version": "1.0.0",
     "name": "MDC Security Decorators Extension",
     "description": "MDC Security Decorators",
     "public": false,
