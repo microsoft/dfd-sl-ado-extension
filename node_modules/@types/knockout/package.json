@@ -1,0 +1,65 @@
+{
+    "name": "@types/knockout",
+    "version": "3.4.72",
+    "description": "TypeScript definitions for Knockout",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/knockout",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Boris Yankov",
+            "url": "https://github.com/borisyankov",
+            "githubUsername": "borisyankov"
+        },
+        {
+            "name": "Igor Oleinikov",
+            "url": "https://github.com/Igorbek",
+            "githubUsername": "Igorbek"
+        },
+        {
+            "name": "Clément Bourgeois",
+            "url": "https://github.com/moonpyk",
+            "githubUsername": "moonpyk"
+        },
+        {
+            "name": "Matt Brooks",
+            "url": "https://github.com/EnableSoftware",
+            "githubUsername": "EnableSoftware"
+        },
+        {
+            "name": "Benjamin Eckardt",
+            "url": "https://github.com/BenjaminEckardt",
+            "githubUsername": "BenjaminEckardt"
+        },
+        {
+            "name": "Mathias Lorenzen",
+            "url": "https://github.com/ffMathy",
+            "githubUsername": "ffMathy"
+        },
+        {
+            "name": "Leonardo Lombardi",
+            "url": "https://github.com/ltlombardi",
+            "githubUsername": "ltlombardi"
+        },
+        {
+            "name": "Retsam",
+            "url": "https://github.com/Retsam",
+            "githubUsername": "Retsam"
+        },
+        {
+            "name": "Rey Pena",
+            "url": "https://github.com/ReyPena",
+            "githubUsername": "ReyPena"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/knockout"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typesPublisherContentHash": "04ddf0f386e8aae14a3cb5f4cd3bce06a1a162877581435e9d6cc60559e694e8",
+    "typeScriptVersion": "4.0"
+}

@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "SlAdoTimeBasedExtension",
+    "publisher": "LaveeshRohra",
+    "version": "1.0.3",
+    "name": "Time based Shift Left extension",
+    "description": "Filtering based on time",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "categories": [
+        "Azure Pipelines"
+    ],
+	"contributions": [
+		{
+            "id": "MSDSecurityEndDecorator",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.post-job-tasks"
+            ],
+            "properties": {
+                "template": "MDCDecorator/MDCDecorator.yml"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "MDCDecorator/MDCDecorator.yml",
+            "addressable": true,
+            "contentType": "text/plain"
+        }
+    ]
+}
