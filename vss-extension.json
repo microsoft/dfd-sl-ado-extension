@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "SlAdoFilterExtension",
+    "id": "MDCExtension",
     "publisher": "LaveeshRohra",
     "version": "1.0.1",
-    "name": "Shift-Left ADO Filter Extension",
-    "description": "Extension that uses docker filter command",
+    "name": "Shift-Left ADO Extension for MDC",
+    "description": "ADO Extension for MDC used for mapping container images to their pipeline runs",
     "public": false,
     "targets": [
         {

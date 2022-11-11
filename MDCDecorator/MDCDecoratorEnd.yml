@@ -7,4 +7,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: | 
-      time docker images --filter "since=$(firstDocker)" --format "table {{.Repository}} {{.Tag}} {{.Digest}}" 
+      echo "Pipeline Start: $(pipelineStartTime)"
+      docker images --filter "since=$(firstDocker)" --format "table {{.CreatedAt}} {{.Repository}} {{.Digest}}" 
