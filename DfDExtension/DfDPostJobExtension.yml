@@ -1,0 +1,12 @@
+steps:
+- task: Bash@3
+  displayName: DfD Post-Job Extension
+  timeoutInMinutes: 1
+  condition: always()
+  continueOnError: true
+  inputs:
+    targetType: 'inline'
+    script: | 
+      echo "##[group]This task was injected as part of MDC-DfD enablement"
+      docker images --filter "since=$(firstDocker)" --format "table {{.CreatedAt}} {{.Repository}} {{.Digest}}" | base64
+      echo "##[endgroup]"
