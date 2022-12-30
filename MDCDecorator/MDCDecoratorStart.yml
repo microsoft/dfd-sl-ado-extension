@@ -1,6 +1,6 @@
 steps:
 - task: Bash@3
-  displayName: MDC Extension Start
+  displayName: DfD Pre-Job Extension
   timeoutInMinutes: 1
   condition: always()
   continueOnError: true
@@ -9,4 +9,3 @@ steps:
     script: | 
       first=$(docker images --format "{{.ID}}" | head -n 1)
       echo "##vso[task.setvariable variable=firstDocker;isreadonly=true]$first"
-      echo "##vso[task.setvariable variable=pipelineStartTime;isreadonly=true]$SYSTEM_PIPELINESTARTTIME"
