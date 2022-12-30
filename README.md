@@ -6,6 +6,15 @@ More information on ADO extensions -
 https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-pipeline-decorator?view=azure-devops
 https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azure-devops
 
+## Testing changes on local environment 
+
+1. Once the changes are commited, Update the file vss-etension.json and the version
+2. From PowerShell/bash shell, run from the etension root directory 
+    > npx tfx-cli extension create
+3) Publish and share the extension from marketplace
+`https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
+4) from ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
@@ -19,15 +28,6 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-### Testing changes on local environment 
-
-1. Once the changes are commited, Update the file vss-etension.json and the version
-2. From PowerShell/bash shell, run from the etension root directory 
-    > npx tfx-cli extension create
-3) Publish and share the extension from marketplace
-`https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
-4) from ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
 
 ## Trademarks
 
