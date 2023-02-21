@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "DfDExtension",
+    "id": "DfDPipelineDecoratorExtension",
     "publisher": "ms-securitydevops",
     "version": "0.0.1",
-    "name": "ADO Extension for DfD (MDC)",
-    "description": "ADO Extension for Defender for Devops (Microsoft Defender for Cloud)",
+    "name": "DefenderForDevops-PipelineDecorators",
+    "description": "ADO Pipeline Decorator Extension for Defender for Devops",
     "public": false,
     "targets": [
         {
