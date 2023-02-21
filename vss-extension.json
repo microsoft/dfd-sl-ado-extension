@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "MDCExtension",
-    "publisher": "LaveeshRohra",
-    "version": "1.0.1",
-    "name": "Shift-Left ADO Extension for MDC",
-    "description": "ADO Extension for MDC used for mapping container images to their pipeline runs",
+    "id": "DfDExtension",
+    "publisher": "ms-securitydevops",
+    "version": "0.0.1",
+    "name": "ADO Extension for DfD (MDC)",
+    "description": "ADO Extension for Defender for Devops (Microsoft Defender for Cloud)",
     "public": false,
     "targets": [
         {
@@ -22,7 +22,7 @@
                 "ms.azure-pipelines-agent-job.pre-job-tasks"
             ],
             "properties": {
-                "template": "MDCDecorator/MDCDecoratorStart.yml"
+                "template": "DfDExtension/DfDPreJobExtension.yml"
             }
         },
 		{
@@ -32,7 +32,7 @@
                 "ms.azure-pipelines-agent-job.post-job-tasks"
             ],
             "properties": {
-                "template": "MDCDecorator/MDCDecoratorEnd.yml"
+                "template": "DfDExtension/DfDPostJobExtension.yml"
             }
         }
     ],
