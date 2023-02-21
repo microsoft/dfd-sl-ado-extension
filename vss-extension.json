@@ -1,6 +1,6 @@
 {
     "manifestVersion": 1,
-    "id": "DfDPipelineDecoratorExtension",
+    "id": "DefenderForDevops-PipelineDecorators",
     "publisher": "ms-securitydevops",
     "version": "0.0.1",
     "name": "DefenderForDevops-PipelineDecorators",
