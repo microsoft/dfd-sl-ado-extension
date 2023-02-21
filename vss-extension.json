@@ -38,12 +38,12 @@
     ],
     "files": [
         {
-            "path": "MDCDecorator/MDCDecoratorStart.yml",
+            "path": "DfDExtension/DfDPreJobExtension.yml",
             "addressable": true,
             "contentType": "text/plain"
         },
         {
-            "path": "MDCDecorator/MDCDecoratorEnd.yml",
+            "path": "DfDExtension/DfDPostJobExtension.yml",
             "addressable": true,
             "contentType": "text/plain"
         }
