@@ -1,6 +1,6 @@
 steps:
 - task: Bash@3
-  displayName: DfD Pre-Job Extension
+  displayName: DfD Pipeline Decorator Extension: Pre-Job
   timeoutInMinutes: 1
   condition: always()
   continueOnError: true
