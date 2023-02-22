@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "DefenderForDevops-PipelineDecorators",
     "publisher": "ms-securitydevops",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "name": "DefenderForDevops-PipelineDecorators",
     "description": "ADO Pipeline Decorator Extension for Defender for Devops",
     "public": false,
