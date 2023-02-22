@@ -1,6 +1,6 @@
 steps:
 - task: Bash@3
-  displayName: DfD Pipeline Decorator Extension: Post-Job 
+  displayName: 'DfD Pipeline Decorator Extension: Post-Job'
   timeoutInMinutes: 1
   condition: always()
   continueOnError: true
