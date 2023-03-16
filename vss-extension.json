@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "DefenderForDevops-PipelineDecorators",
+    "id": "ms-dfd-code-to-cloud",
     "publisher": "ms-securitydevops",
-    "version": "0.0.2",
-    "name": "DefenderForDevops-PipelineDecorators",
-    "description": "ADO Pipeline Decorator Extension for Defender for Devops",
+    "version": "0.0.3",
+    "name": "Microsoft Defender for DevOps - Code to cloud",
+    "description": "Code to cloud extension for Microsoft Defender for DevOps",
     "public": false,
     "targets": [
         {
@@ -47,5 +47,39 @@
             "addressable": true,
             "contentType": "text/plain"
         }
-    ]
+    ],
+    "icons": {
+        "default": "metadata/icon.png"
+    },
+    "content": {
+        "details": {
+            "path": "metadata/extension-readme.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/microsoft/dfd-sl-ado-extension"
+    },
+    "tags": [
+        "Security",
+        "Analysis",
+        "Microsoft Defender",
+        "Microsoft Defender for Cloud",
+        "Defender For Devops"
+    ],
+    "links": {
+        "getstarted": {
+          "uri": "https://github.com/microsoft/dfd-sl-ado-extension"
+        },
+        "support": {
+          "uri": "mailto:mscahelp@microsoft.com"
+        },
+        "license": {
+          "uri": "https://github.com/microsoft/dfd-sl-ado-extension/blob/main/LICENSE"
+        }
+      },
+      "branding": {
+        "color": "rgb(64, 64, 64)",
+        "theme": "dark"
+    }
 }
