@@ -1,6 +1,6 @@
 steps:
 - task: Bash@3
-  displayName: 'DfD Pipeline Decorator Extension: Pre-Job'
+  displayName: 'Microsoft Defender for DevOps Container Mapping Start'
   timeoutInMinutes: 1
   condition: always()
   continueOnError: true
