@@ -7,6 +7,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: | 
-      echo "##[group]This task was injected as part of MDC-DfD enablement"
+      echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-devops"
       docker images --filter "since=$(firstDocker)" --format "{{.CreatedAt}}::{{.Repository}}::{{.Digest}}" | base64
       echo "##[endgroup]"

@@ -7,7 +7,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: | 
-      echo "##[group]This task was injected as part of MDC-DfD enablement"
+      echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-devops"
       first=$(docker images --format "{{.ID}}" | head -n 1)
       echo "##vso[task.setvariable variable=firstDocker;isreadonly=true]$first"
       echo "##[endgroup]"
