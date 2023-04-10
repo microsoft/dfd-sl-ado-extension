@@ -1,13 +1,13 @@
 steps:
 - task: Bash@3
-  displayName: 'DfD Pipeline Decorator Extension: Pre-Job'
+  displayName: 'Microsoft Defender for DevOps Container Mapping Start'
   timeoutInMinutes: 1
   condition: always()
   continueOnError: true
   inputs:
     targetType: 'inline'
     script: | 
-      echo "##[group]This task was injected as part of MDC-DfD enablement"
+      echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://go.microsoft.com/fwlink/?linkid=2231419"
       first=$(docker images --format "{{.ID}}" | head -n 1)
       echo "##vso[task.setvariable variable=firstDocker;isreadonly=true]$first"
       echo "##[endgroup]"
