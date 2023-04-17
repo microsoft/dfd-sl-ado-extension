@@ -8,5 +8,7 @@ steps:
     targetType: 'inline'
     script: | 
       echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://go.microsoft.com/fwlink/?linkid=2231419"
+      # This section is used as a delimiter while fetching logs from the REST API, do not modify
+      echo "##[section]:::::"
       docker images --filter "since=$(firstDocker)" --format "{{.CreatedAt}}::{{.Repository}}::{{.Digest}}" | base64
       echo "##[endgroup]"
