@@ -8,8 +8,8 @@ https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azur
 
 ## Testing changes on local environment 
 
-1. Once the changes are commited, Update the file vss-etension.json and the version
-2. From PowerShell/bash shell, run from the etension root directory 
+1. Once the changes are commited, Update the file vss-extension.json and the version
+2. From PowerShell/bash shell, run from the extension root directory 
     > npx tfx-cli extension create
 3) Publish and share the extension from marketplace
 `https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
