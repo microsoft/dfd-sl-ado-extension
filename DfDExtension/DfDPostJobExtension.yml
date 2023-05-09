@@ -16,7 +16,7 @@ steps:
       {
         # Fetch Docker events for getting a complete list of images that were pushed from this container
         echo "$sectionDelim Events:"
-        docker events --since "$(pipelineStart)" --until "$(date --iso-8601=seconds)" --filter "type=image" --filter "event=push" --format "ID={{.ID}}"
+        docker events --since "$(pipelineStart)" --until "$(date --iso-8601=ns)" --filter "type=image" --filter "event=push" --format "ID={{.ID}}"
         
         # Fetch Docker images for getting a complete list of image digests. 
         # We will coorelate based on the image ID and the tag to get the digest.
