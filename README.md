@@ -8,12 +8,13 @@ https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azur
 
 ## Testing changes on local environment 
 
-1. Once the changes are commited, Update the file vss-etension.json and the version
-2. From PowerShell/bash shell, run from the etension root directory 
+1. Once the changes are commited, Update the version by modifying the VERSION file.
+2. Execute the `ReplaceVersion.ps1` script to update the version in `vss-extension.json` file and the `DfDExtension/DfDPostJobExtension.yml` file.
+3. From PowerShell/bash shell, run from the etension root directory 
     > npx tfx-cli extension create
-3) Publish and share the extension from marketplace
+4. Publish and share the extension from marketplace
 `https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
-4) from ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
+5. from ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
 
 ## Contributing
 

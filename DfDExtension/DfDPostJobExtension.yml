@@ -7,6 +7,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: | 
+      # This is the current version of the extension as specified in the VERSION file, please modify this only by the ReplaceVersion.ps1 script
+      curDecoratorVersion=0.0.8
+
       # This is used as a delimiter to separate out sections for log parsing in the backend, please do not modify
       sectionDelim=":::"
       echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://go.microsoft.com/fwlink/?linkid=2231419"
@@ -14,6 +17,8 @@ steps:
       echo "##[section]:::::"
 
       {
+        # Print the version of the decorator extension (please don't modify)
+        echo "Version: $curDecoratorVersion"      
         # Fetch Docker events for getting a complete list of images that were pushed from this container
         echo "$sectionDelim Events:"
         docker events --since "$(pipelineStart)" --until "$(date --iso-8601=ns)" --filter "type=image" --filter "event=push" --format "ID={{.ID}}"
