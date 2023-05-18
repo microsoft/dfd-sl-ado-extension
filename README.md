@@ -14,7 +14,7 @@ https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azur
     > npx tfx-cli extension create
 4. Publish and share the extension from marketplace
 `https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
-5. from ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
+5. From ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
 
 ## Contributing
 
