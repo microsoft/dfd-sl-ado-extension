@@ -10,7 +10,7 @@ https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azur
 
 1. Once the changes are commited, Update the version by modifying the VERSION file.
 2. Execute the `ReplaceVersion.ps1` script to update the version in `vss-extension.json` file and the `DfDExtension/DfDPostJobExtension.yml` file.
-3. From PowerShell/bash shell, run from the etension root directory 
+3. From PowerShell/bash shell, run from the extension root directory 
     > npx tfx-cli extension create
 4. Publish and share the extension from marketplace
 `https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
