@@ -1,85 +1,85 @@
 {
-    "manifestVersion": 1,
-    "id": "ms-dfd-code-to-cloud",
-    "publisher": "ms-securitydevops",
-    "version": "0.0.5",
-    "name": "Microsoft Defender for DevOps Container Mapping",
-    "description": "ADO extension for Container Mapping in Microsoft Defender for DevOps",
-    "public": false,
-    "targets": [
-        {
-            "id": "Microsoft.VisualStudio.Services"
-        }
-    ],    
-    "categories": [
-        "Azure Pipelines"
-    ],
-	"contributions": [
-        {
-            "id": "MSDSecurityStartDecorator",
-            "type": "ms.azure-pipelines.pipeline-decorator",
-            "targets": [
-                "ms.azure-pipelines-agent-job.pre-job-tasks"
-            ],
-            "properties": {
-                "template": "DfDExtension/DfDPreJobExtension.yml"
-            }
-        },
-		{
-            "id": "MSDSecurityEndDecorator",
-            "type": "ms.azure-pipelines.pipeline-decorator",
-            "targets": [
-                "ms.azure-pipelines-agent-job.post-job-tasks"
-            ],
-            "properties": {
-                "template": "DfDExtension/DfDPostJobExtension.yml"
-            }
-        }
-    ],
-    "files": [
-        {
-            "path": "DfDExtension/DfDPreJobExtension.yml",
-            "addressable": true,
-            "contentType": "text/plain"
-        },
-        {
-            "path": "DfDExtension/DfDPostJobExtension.yml",
-            "addressable": true,
-            "contentType": "text/plain"
-        }
-    ],
-    "icons": {
-        "default": "metadata/icon.png"
-    },
-    "content": {
-        "details": {
-            "path": "metadata/extension-readme.md"
-        }
-    },
-    "repository": {
-        "type": "git",
-        "uri": "https://github.com/microsoft/dfd-sl-ado-extension"
-    },
-    "tags": [
-        "Security",
-        "Analysis",
-        "Microsoft Defender",
-        "Microsoft Defender for Cloud",
-        "Defender For Devops"
-    ],
-    "links": {
-        "getstarted": {
-          "uri": "https://github.com/microsoft/dfd-sl-ado-extension"
-        },
-        "support": {
-          "uri": "mailto:mscahelp@microsoft.com"
-        },
-        "license": {
-          "uri": "https://github.com/microsoft/dfd-sl-ado-extension/blob/main/LICENSE"
-        }
-      },
-      "branding": {
-        "color": "rgb(64, 64, 64)",
-        "theme": "dark"
+  "manifestVersion": 1,
+  "id": "ms-dfd-code-to-cloud",
+  "publisher": "ms-securitydevops",
+  "version": "0.0.6",
+  "name": "Microsoft Defender for DevOps Container Mapping",
+  "description": "ADO extension for Container Mapping in Microsoft Defender for DevOps",
+  "public": false,
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
     }
+  ],
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "contributions": [
+    {
+      "id": "MSDSecurityStartDecorator",
+      "type": "ms.azure-pipelines.pipeline-decorator",
+      "targets": [
+        "ms.azure-pipelines-agent-job.pre-job-tasks"
+      ],
+      "properties": {
+        "template": "DfDExtension/DfDPreJobExtension.yml"
+      }
+    },
+    {
+      "id": "MSDSecurityEndDecorator",
+      "type": "ms.azure-pipelines.pipeline-decorator",
+      "targets": [
+        "ms.azure-pipelines-agent-job.post-job-tasks"
+      ],
+      "properties": {
+        "template": "DfDExtension/DfDPostJobExtension.yml"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "DfDExtension/DfDPreJobExtension.yml",
+      "addressable": true,
+      "contentType": "text/plain"
+    },
+    {
+      "path": "DfDExtension/DfDPostJobExtension.yml",
+      "addressable": true,
+      "contentType": "text/plain"
+    }
+  ],
+  "icons": {
+    "default": "metadata/icon.png"
+  },
+  "content": {
+    "details": {
+      "path": "metadata/extension-readme.md"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/microsoft/dfd-sl-ado-extension"
+  },
+  "tags": [
+    "Security",
+    "Analysis",
+    "Microsoft Defender",
+    "Microsoft Defender for Cloud",
+    "Defender For Devops"
+  ],
+  "links": {
+    "getstarted": {
+      "uri": "https://github.com/microsoft/dfd-sl-ado-extension"
+    },
+    "support": {
+      "uri": "mailto:mscahelp@microsoft.com"
+    },
+    "license": {
+      "uri": "https://github.com/microsoft/dfd-sl-ado-extension/blob/main/LICENSE"
+    }
+  },
+  "branding": {
+    "color": "rgb(64, 64, 64)",
+    "theme": "dark"
+  }
 }
