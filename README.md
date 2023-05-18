@@ -6,7 +6,7 @@ More information on ADO extensions -
 https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-pipeline-decorator?view=azure-devops
 https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azure-devops
 
-## Testing changes on local environment 
+## Releasing new version 
 
 1. Once the changes are commited, Update the version by modifying the VERSION file.
 2. Execute the `ReplaceVersion.ps1` script to update the version in `vss-extension.json` file and the `DfDExtension/DfDPostJobExtension.yml` file.
@@ -14,6 +14,8 @@ https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azur
     > npx tfx-cli extension create
 4. Publish and share the extension from marketplace
 `https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
+    - For releasing to public, use the [Microsoft Dfd Publisher](https://marketplace.visualstudio.com/manage/publishers/ms-securitydevops?noPrompt=true)
+    - For local testing, use your own publisher name
 5. From ADO organization settings/Extension - add the extension. More information on publishing extension can be found [here](https://learn.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azure-devops).
 
 ## Contributing

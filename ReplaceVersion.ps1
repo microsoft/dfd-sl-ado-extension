@@ -1,3 +1,4 @@
+# Updates the version in `vss-extension.json` file and the `DfDExtension/DfDPostJobExtension.yml` file.
 $ErrorActionPreference = "Stop"
 
 $version = Get-Content -Path $PSScriptRoot/VERSION
