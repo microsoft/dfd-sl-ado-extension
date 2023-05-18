@@ -8,7 +8,7 @@ steps:
     targetType: 'inline'
     script: | 
       # This is the current version of the extension as specified in the VERSION file, please modify this only by the ReplaceVersion.ps1 script
-      curDecoratorVersion=0.0.8
+      curDecoratorVersion=0.0.6
 
       # This is used as a delimiter to separate out sections for log parsing in the backend, please do not modify
       sectionDelim=":::"
@@ -30,3 +30,4 @@ steps:
       } | base64
 
       echo "##[endgroup]"
+
