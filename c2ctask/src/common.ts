@@ -35,5 +35,5 @@ export function execTaskCmdSync(cmd: string, args: string[], options?: IExecOpti
         Stderr: ${cmdExecute.stderr}`);
     }
 
-    return cmdExecute.stdout;
+    return cmdExecute.stdout.trim();
 }
