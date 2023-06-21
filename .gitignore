@@ -1,2 +1,8 @@
 #Extension Packages
 *.vsix
+
+node_modules
+
+*.js
+
+.taskkey

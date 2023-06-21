@@ -1,8 +1,9 @@
 {
   "manifestVersion": 1,
   "id": "ms-dfd-code-to-cloud",
-  "publisher": "ms-securitydevops",
-  "version": "0.0.6",
+  "publisher": "laveeshrohra",
+  "primary_pub": "ms-securitydevops",
+  "version": "0.0.14",
   "name": "Microsoft Defender for DevOps Container Mapping",
   "description": "ADO extension for Container Mapping in Microsoft Defender for DevOps",
   "public": false,
@@ -15,6 +16,16 @@
     "Azure Pipelines"
   ],
   "contributions": [
+    {
+      "id": "custom-build-release-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "c2ctask"
+      }
+    },
     {
       "id": "MSDSecurityStartDecorator",
       "type": "ms.azure-pipelines.pipeline-decorator",
@@ -46,6 +57,9 @@
       "path": "DfDExtension/DfDPostJobExtension.yml",
       "addressable": true,
       "contentType": "text/plain"
+    },
+    {
+      "path": "c2ctask"
     }
   ],
   "icons": {

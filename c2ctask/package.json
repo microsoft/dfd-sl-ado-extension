@@ -1,0 +1,24 @@
+{
+  "name": "c2ctask",
+  "version": "1.0.0",
+  "description": "ADO task for Code to Cloud for Defender for DevOps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "repository": "https://github.com/microsoft/dfd-sl-ado-extension/",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.3.1",
+    "@types/q": "^1.5.5",
+    "mocha": "^10.2.0",
+    "sync-request": "^6.1.0",
+    "typescript": "^4.6.3"
+  }
+}

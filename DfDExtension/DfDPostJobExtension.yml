@@ -1,33 +1,43 @@
-steps:
-- task: Bash@3
-  displayName: 'Microsoft Defender for DevOps Container Mapping End'
-  timeoutInMinutes: 1
-  condition: always()
-  continueOnError: true
-  inputs:
-    targetType: 'inline'
-    script: | 
-      # This is the current version of the extension as specified in the VERSION file, please modify this only by the ReplaceVersion.ps1 script
-      curDecoratorVersion=0.0.6
+# steps:
+# - task: Bash@3
+#   displayName: 'Microsoft Defender for DevOps Container Mapping End'
+#   timeoutInMinutes: 1
+#   condition: always()
+#   continueOnError: true
+#   inputs:
+#     targetType: 'inline'
+#     script: | 
+#       # This is the current version of the extension as specified in the VERSION file, please modify this only by the ReplaceVersion.ps1 script
+#       curDecoratorVersion=0.0.6
 
-      # This is used as a delimiter to separate out sections for log parsing in the backend, please do not modify
-      sectionDelim=":::"
-      echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://go.microsoft.com/fwlink/?linkid=2231419"
-      # This section is used as a delimiter while fetching logs from the REST API, do not modify
-      echo "##[section]:::::"
+#       # This is used as a delimiter to separate out sections for log parsing in the backend, please do not modify
+#       sectionDelim=":::"
+#       echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://go.microsoft.com/fwlink/?linkid=2231419"
+#       # This section is used as a delimiter while fetching logs from the REST API, do not modify
+#       echo "##[section]:::::"
 
-      {
-        # Print the version of the decorator extension (please don't modify)
-        echo "Version: $curDecoratorVersion"      
-        # Fetch Docker events for getting a complete list of images that were pushed from this container
-        echo "$sectionDelim Events:"
-        docker events --since "$(pipelineStart)" --until "$(date --iso-8601=ns)" --filter "type=image" --filter "event=push" --format "ID={{.ID}}"
+#       {
+#         # Print the version of the decorator extension (please don't modify)
+#         echo "Version: $curDecoratorVersion"      
+#         # Fetch Docker events for getting a complete list of images that were pushed from this container
+#         echo "$sectionDelim Events:"
+#         docker events --since "$(pipelineStart)" --until "$(date --iso-8601=ns)" --filter "type=image" --filter "event=push" --format "ID={{.ID}}"
         
-        # Fetch Docker images for getting a complete list of image digests. 
-        # We will coorelate based on the image ID and the tag to get the digest.
-        echo "$sectionDelim Images:"
-        docker images --format "CreatedAt={{.CreatedAt}}::Repo={{.Repository}}::Tag={{.Tag}}::Digest={{.Digest}}"
-      } | base64
+#         # Fetch Docker images for getting a complete list of image digests. 
+#         # We will coorelate based on the image ID and the tag to get the digest.
+#         echo "$sectionDelim Images:"
+#         docker images --format "CreatedAt={{.CreatedAt}}::Repo={{.Repository}}::Tag={{.Tag}}::Digest={{.Digest}}"
+#       } | base64
 
-      echo "##[endgroup]"
+#       echo "##[endgroup]"
 
+
+steps:
+- ${{ if or(and(not(containsValue(job.steps.*.inputs.tasktype, 'post-job')), containsValue(job.steps.*.task.id, '5b0f5dae-fcdc-4f70-8237-b29eacf9bfd9')), not(containsValue(job.steps.*.task.id, '5b0f5dae-fcdc-4f70-8237-b29eacf9bfd9'))) }}:
+  - task: DefenderForDevOpsCodeToCloud@0
+    displayName: '(Task) Microsoft Defender for DevOps Container Mapping End'
+    timeoutInMinutes: 1
+    condition: always()
+    continueOnError: true
+    inputs:
+      tasktype: 'post-job'
