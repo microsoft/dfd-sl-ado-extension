@@ -2,7 +2,7 @@ import tl = require('azure-pipelines-task-lib/task');
 import * as common from './common';
 import { IExecOptions } from 'azure-pipelines-task-lib/toolrunner';
 
-interface CodeToCloud {
+interface ICodeToCloud {
     run(): any;
 }
 
@@ -12,7 +12,7 @@ enum TaskType {
 }
 
 
-export class ContainerMapping implements CodeToCloud {
+export class ContainerMapping implements ICodeToCloud {
     private readonly taskType: TaskType;
     private readonly version: string;
     private readonly sectionDelim: string = ":::";
@@ -69,7 +69,6 @@ export class ContainerMapping implements CodeToCloud {
     }
 
     run() {
-        console.log("Running " + this.taskType);
         switch (this.taskType) {
             case TaskType.PreJob:
                 this.runPre();
