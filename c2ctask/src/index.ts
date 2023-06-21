@@ -1,5 +1,5 @@
 import tl = require('azure-pipelines-task-lib/task');
-import { ContainerMapping } from './conMap';
+import { ContainerMapping } from './containerMapping';
 
 enum Inputs {
     TaskType = 'tasktype'
@@ -14,5 +14,6 @@ async function run() {
 
 run().catch(error => {
     console.log("Ran into error: " + error);
+    // Always mark it as success even on error
     tl.setResult(tl.TaskResult.Succeeded, "Finished execution", true);
 });

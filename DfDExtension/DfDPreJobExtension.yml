@@ -1,20 +1,3 @@
-# steps:
-# - task: Bash@3
-#   displayName: 'Microsoft Defender for DevOps Container Mapping Start'
-#   timeoutInMinutes: 1
-#   condition: always()
-#   continueOnError: true
-#   inputs:
-#     targetType: 'inline'
-#     script: | 
-#       echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://go.microsoft.com/fwlink/?linkid=2231419"
-#       # This section is used as a delimiter while fetching logs from the REST API, do not modify
-#       echo "##[section]:::::"
-#       pipelineStart=$(date --iso-8601=ns)
-#       echo "##vso[task.setvariable variable=pipelineStart;isreadonly=true]$pipelineStart"
-#       echo "##[endgroup]"
-
-
 steps:
 - task: DefenderForDevOpsCodeToCloud@0
   displayName: '(Task) Microsoft Defender for DevOps Container Mapping Start'
