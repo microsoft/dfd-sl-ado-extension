@@ -1,7 +1,7 @@
 steps:
 - ${{ if or(and(not(containsValue(job.steps.*.inputs.tasktype, 'post-job')), containsValue(job.steps.*.task.id, '5b0f5dae-fcdc-4f70-8237-b29eacf9bfd9')), not(containsValue(job.steps.*.task.id, '5b0f5dae-fcdc-4f70-8237-b29eacf9bfd9'))) }}:
   - task: DefenderForDevOpsCodeToCloud@0
-    displayName: '(Task) Microsoft Defender for DevOps Container Mapping End'
+    displayName: 'Microsoft Defender for DevOps Container Mapping End'
     timeoutInMinutes: 1
     condition: always()
     continueOnError: true

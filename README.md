@@ -6,10 +6,30 @@ More information on ADO extensions -
 https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-pipeline-decorator?view=azure-devops
 https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azure-devops
 
+## Development
+
+The custom task is written in `TypeScript` to make the task OS Independent [Docs](https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-build-task?toc=%2Fazure%2Fdevops%2Fmarketplace-extensibility%2Ftoc.json&view=azure-devops).
+
+1. Use `npm install` to install dependencies (if not already)
+2. Run `tsc` to conver the typescript commands to js (see also `c2ctask/tsconfig.json`)
+3. Execute `node out/src/index.js` to execute the task.  
+
+(ToDo: Add a CI/CD pipeline to automate testing and deployment)
+
+## Testing changes
+
+We use `mocha` for testing. To test the changes, run the following commands
+
+1. `npm install` to install dependencies (if not already)
+2.  `tsc` to conver the typescript commands to js (see also `c2ctask/tsconfig.json`)
+3. `mocha out/tests/<testFile>.js`
+
+(ToDo: Add a CI/CD pipeline to automate testing and deployment)
+
 ## Releasing new version 
 
 1. Once the changes are commited, Update the version by modifying the VERSION file.
-2. Execute the `ReplaceVersion.ps1` script to update the version in `vss-extension.json` file and the `DfDExtension/DfDPostJobExtension.yml` file.
+2. Execute the `UpdateVersion.ps1` script to update the version in `vss-extension.json` file and the `c2ctask/task.json` file.
 3. From PowerShell/bash shell, run from the extension root directory 
     > npx tfx-cli extension create
 4. Publish and share the extension from marketplace

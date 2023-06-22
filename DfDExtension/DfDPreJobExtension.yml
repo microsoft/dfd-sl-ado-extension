@@ -1,6 +1,6 @@
 steps:
 - task: DefenderForDevOpsCodeToCloud@0
-  displayName: '(Task) Microsoft Defender for DevOps Container Mapping Start'
+  displayName: 'Microsoft Defender for DevOps Container Mapping Start'
   timeoutInMinutes: 1
   condition: always()
   continueOnError: true

@@ -9,8 +9,11 @@ $extensionJson = Get-Content -Path $filePath -Raw | ConvertFrom-Json
 $extensionJson.version = $version
 $extensionJson | ConvertTo-Json -Depth 100 | Set-Content -Path $filePath
 
-# Update version in DfdPostJobExtension.yml file
-$filePath = Join-Path $PSScriptRoot "DfdExtension" "DfdPostJobExtension.yml"
-$dfdPostJobExtensionYml = Get-Content -Path $filePath -Raw
-$dfdPostJobExtensionYml = $dfdPostJobExtensionYml -replace 'curDecoratorVersion=\d+\.\d+\.\d+', "curDecoratorVersion=$version"
-$dfdPostJobExtensionYml | Set-Content -Path $filePath
+# Update version in task.json file
+$filePath = Join-Path $PSScriptRoot "c2ctask" "task.json"
+$extensionJson = Get-Content -Path $filePath -Raw | ConvertFrom-Json
+$subVersions = $version.Split(".")
+$extensionJson.version.Major = [int]($subVersions[0])
+$extensionJson.version.Minor = [int]($subVersions[1])
+$extensionJson.version.Patch = [int]($subVersions[2])
+$extensionJson | ConvertTo-Json -Depth 100 | Set-Content -Path $filePath
