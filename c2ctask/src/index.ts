@@ -1,9 +1,6 @@
 import tl = require('azure-pipelines-task-lib/task');
 import { ContainerMapping } from './containerMapping';
-
-enum Inputs {
-    TaskType = 'tasktype'
-}
+import { Inputs } from "./common";
 
 async function run() {
     const inputString: string | undefined = tl.getInput(Inputs.TaskType, true);

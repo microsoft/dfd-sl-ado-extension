@@ -5,19 +5,10 @@ import { ICodeToCloud } from './c2c';
 
 
 /*
-* Enum for the task type input
-*/
-enum TaskType {
-    PreJob = 'pre-job',
-    PostJob = 'post-job'
-}
-
-
-/*
 * Class for Container Mapping functionality in Code to Cloud Decorator task.
 */
 export class ContainerMapping implements ICodeToCloud {
-    private readonly taskType: TaskType;
+    private readonly taskType: common.TaskType;
     private readonly version: string;
     private readonly sectionDelim: string = ":::";
     private readonly preJobStartTime: string = "PREJOBSTARTTIME";
@@ -26,7 +17,7 @@ export class ContainerMapping implements ICodeToCloud {
     };
 
     constructor(inputString: string | undefined) {
-        this.taskType = inputString as TaskType;
+        this.taskType = inputString as common.TaskType;
         this.version = common.getTaskVersion();
     }
 
@@ -46,7 +37,6 @@ export class ContainerMapping implements ICodeToCloud {
         if (startTime == undefined) {
             throw new Error(this.preJobStartTime + " variable not set");
         }
-        const encode = (str: string):string => Buffer.from(str, 'binary').toString('base64');
         let data : string[] = [];
         data.push(common.execTaskCmdSync("docker", ["--version"], this.imageOptions));
         data.push("Version: " + this.version);
@@ -75,7 +65,7 @@ export class ContainerMapping implements ICodeToCloud {
             "CreatedAt={{.CreatedAt}}::Repo={{.Repository}}::Tag={{.Tag}}::Digest={{.Digest}}"
             ], this.imageOptions);
         data.push(images);
-        console.log(encode(data.join("\n")));
+        console.log(common.encode(data.join("\n")));
     }
 
     /*
@@ -83,10 +73,10 @@ export class ContainerMapping implements ICodeToCloud {
     */
     run() {
         switch (this.taskType) {
-            case TaskType.PreJob:
+            case common.TaskType.PreJob:
                 this.runPre();
                 break;
-            case TaskType.PostJob:
+            case common.TaskType.PostJob:
                 this.runPost();
                 break;
             default:
