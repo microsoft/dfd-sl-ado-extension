@@ -1,12 +1,13 @@
 #Extension Packages
 *.vsix
 
+# Ignore node modules and any generated JS files (we want to generate it on the fly)
 node_modules
-
 *.js
-
-.taskkey
-
 out
 
+# Auto-created when trying to run tests 
+.taskkey
+
+# Ignore VSCode stuff
 .vscode

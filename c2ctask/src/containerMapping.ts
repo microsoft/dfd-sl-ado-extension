@@ -16,7 +16,7 @@ export class ContainerMapping implements ICodeToCloud {
         silent: true
     };
 
-    constructor(inputString: string | undefined) {
+    constructor(inputString: string) {
         this.taskType = inputString as common.TaskType;
         this.version = common.getTaskVersion();
     }

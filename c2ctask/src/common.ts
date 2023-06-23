@@ -9,7 +9,6 @@ export enum Inputs {
     TaskType = 'tasktype'
 }
 
-
 /*
 * Enum for the task type input
 */
@@ -26,10 +25,11 @@ export enum Constants {
     Unknown = "unknown"
 }
 
-
 /**
- * Get the version of the current task
+ * Gets the version of the task by reading the task.json file.
  * 
+ * @param taskPath - Optional path to the task.json file. If not provided, the function will look for it in the default location.
+ * @returns The version of the task in the format "Major.Minor.Patch", or Constants.Unknown if an error occurs.
  */
 export function getTaskVersion(taskPath?: string): string {
     try {
@@ -42,7 +42,6 @@ export function getTaskVersion(taskPath?: string): string {
         return Constants.Unknown;
     }
 }
-
 
 /**
  * Wrapper over the Task.execSync, Execute a command and return its stdout. 
@@ -65,7 +64,6 @@ export function execTaskCmdSync(cmd: string, args: string[], options?: IExecOpti
 
     return cmdExecute.stdout.trim();
 }
-
 
 /**
  * Encodes a string to base64.

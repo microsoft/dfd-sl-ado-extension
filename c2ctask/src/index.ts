@@ -3,7 +3,7 @@ import { ContainerMapping } from './containerMapping';
 import { Inputs } from "./common";
 
 async function run() {
-    const inputString: string | undefined = tl.getInput(Inputs.TaskType, true);
+    const inputString: string = tl.getInputRequired(Inputs.TaskType);
     console.log('Running ', inputString);
     const conMap = new ContainerMapping(inputString);
     conMap.run();
