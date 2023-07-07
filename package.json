@@ -1,14 +1,11 @@
 {
-  "name": "decoratorsetension",
+  "name": "microsoft-security-devops-azdevops-decorator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Decorator for the Microsoft Security DevOps AzDevOps Extension",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Microsoft Corporation",
+  "license": "MIT",
   "dependencies": {
     "vss-web-extension-sdk": "^5.141.0"
   }

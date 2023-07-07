@@ -3,8 +3,8 @@
   "id": "ms-dfd-code-to-cloud",
   "publisher": "ms-securitydevops",
   "version": "0.0.6",
-  "name": "Microsoft Defender for DevOps Container Mapping",
-  "description": "ADO extension for Container Mapping in Microsoft Defender for DevOps",
+  "name": "Microsoft Security DevOps Decorator",
+  "description": "ADO decorator extension for Microsoft Security DevOps",
   "public": false,
   "targets": [
     {

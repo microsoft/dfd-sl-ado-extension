@@ -1,2 +1,4 @@
 #Extension Packages
 *.vsix
+.vscode
+node_modules

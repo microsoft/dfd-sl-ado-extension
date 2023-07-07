@@ -8,10 +8,12 @@ https://learn.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azur
 
 ## Releasing new version 
 
-1. Once the changes are commited, Update the version by modifying the VERSION file.
-2. Execute the `ReplaceVersion.ps1` script to update the version in `vss-extension.json` file and the `DfDExtension/DfDPostJobExtension.yml` file.
+1. Modify and Commit the new changes.
+2. Update the version in `vss-extension.json` file.
+    - Alternatively, you can add the `--rev-version` command in the extension create command to increment it directly 
+    > npx tfx-cli extension create --rev-version 
 3. From PowerShell/bash shell, run from the extension root directory 
-    > npx tfx-cli extension create
+    > npx tfx-cli extension create [--rev-version]
 4. Publish and share the extension from marketplace
 `https://marketplace.visualstudio.com/manage/publishers/<Your-publisher-name>`
     - For releasing to public, use the [Microsoft Dfd Publisher](https://marketplace.visualstudio.com/manage/publishers/ms-securitydevops?noPrompt=true)
