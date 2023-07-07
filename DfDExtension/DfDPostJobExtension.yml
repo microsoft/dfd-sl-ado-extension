@@ -1,33 +1,11 @@
 steps:
-- task: Bash@3
-  displayName: 'Microsoft Defender for DevOps Container Mapping End'
-  timeoutInMinutes: 1
-  condition: always()
-  continueOnError: true
-  inputs:
-    targetType: 'inline'
-    script: | 
-      # This is the current version of the extension as specified in the VERSION file, please modify this only by the ReplaceVersion.ps1 script
-      curDecoratorVersion=0.0.6
-
-      # This is used as a delimiter to separate out sections for log parsing in the backend, please do not modify
-      sectionDelim=":::"
-      echo "##[group]This task was injected as part of Microsoft Defender for DevOps enablement- https://go.microsoft.com/fwlink/?linkid=2231419"
-      # This section is used as a delimiter while fetching logs from the REST API, do not modify
-      echo "##[section]:::::"
-
-      {
-        # Print the version of the decorator extension (please don't modify)
-        echo "Version: $curDecoratorVersion"      
-        # Fetch Docker events for getting a complete list of images that were pushed from this container
-        echo "$sectionDelim Events:"
-        docker events --since "$(pipelineStart)" --until "$(date --iso-8601=ns)" --filter "type=image" --filter "event=push" --format "ID={{.ID}}"
-        
-        # Fetch Docker images for getting a complete list of image digests. 
-        # We will coorelate based on the image ID and the tag to get the digest.
-        echo "$sectionDelim Images:"
-        docker images --format "CreatedAt={{.CreatedAt}}::Repo={{.Repository}}::Tag={{.Tag}}::Digest={{.Digest}}"
-      } | base64
-
-      echo "##[endgroup]"
-
+# Only inject the task if this task is not added manually in the pipeline 
+# We only check for the `post-job` injection Since we're relying on the start data set by the `pre-job`
+- ${{ if or(and(not(containsValue(job.steps.*.inputs.command, 'post-job')), containsValue(job.steps.*.task.id, '8d616517-6390-454f-b369-6fd038d8fe96')), not(containsValue(job.steps.*.task.id, '8d616517-6390-454f-b369-6fd038d8fe96'))) }}:
+  - task: MicrosoftSecurityDevOps@1
+    displayName: 'Microsoft Security DevOps - Container Mapping End'
+    timeoutInMinutes: 1
+    condition: always()
+    continueOnError: true
+    inputs:
+      command: 'post-job'
