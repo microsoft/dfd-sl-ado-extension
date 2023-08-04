@@ -1,7 +1,7 @@
 steps:
 - task: MicrosoftSecurityDevOps@1
-  displayName: 'Microsoft Security DevOps - Container Mapping Start'
-  timeoutInMinutes: 2
+  displayName: 'Microsoft Defender for DevOps Container Mapping Start'
+  timeoutInMinutes: 2 # We're enforcing an internal timeout of 1min inside the MSDO task, setting it to 2 mins here to ensure the decorator task doesnt timeout
   condition: always()
   continueOnError: true
   inputs:
