@@ -1,7 +1,7 @@
 steps:
 - task: MicrosoftSecurityDevOps@1
   displayName: 'Microsoft Security DevOps - Container Mapping Start'
-  timeoutInMinutes: 1
+  timeoutInMinutes: 2
   condition: always()
   continueOnError: true
   inputs:

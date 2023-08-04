@@ -4,7 +4,7 @@ steps:
 - ${{ if or(and(not(containsValue(job.steps.*.inputs.command, 'post-job')), containsValue(job.steps.*.task.id, '8d616517-6390-454f-b369-6fd038d8fe96')), not(containsValue(job.steps.*.task.id, '8d616517-6390-454f-b369-6fd038d8fe96'))) }}:
   - task: MicrosoftSecurityDevOps@1
     displayName: 'Microsoft Security DevOps - Container Mapping End'
-    timeoutInMinutes: 1
+    timeoutInMinutes: 2
     condition: always()
     continueOnError: true
     inputs:
