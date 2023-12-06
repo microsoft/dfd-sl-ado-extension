@@ -19,4 +19,4 @@ To view the results of the code to cloud mapping, open Microsoft Defender for Cl
 * [Microsoft Defender for DevOps](https://aka.ms/DfDdocs)
 * [Microsoft Defender for Cloud](https://aka.ms/mdc)
 * [Microsoft Security DevOps Azure DevOps Extension](https://aka.ms/msdo-azdevops)
-* [Map container images from code to cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/container-image-mapping)
+* [Map container images from code to cloud](https://aka.ms/containermapping)
