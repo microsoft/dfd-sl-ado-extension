@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "ms-dfd-code-to-cloud",
   "publisher": "ms-securitydevops",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "Microsoft Defender for DevOps Container Mapping",
   "description": "ADO extension for Container Mapping in Microsoft Defender for DevOps",
   "public": false,

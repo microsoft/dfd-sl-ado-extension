@@ -1,4 +1,4 @@
-# ADO Extension for Defender for DevOps
+# ADO Extension for DevOps Security in Defender for Cloud
 
 An extension for Azure DevOps that allows [Microsoft Defender for DevOps](https://aka.ms/DfDdocs) to extract metadata from pipelines, such as a container's digest ID, container image name etc. That information will then be used within [Microsoft Defender for Cloud](https://aka.ms/mdc) to connect DevOps entities with their related cloud resources (Azure, AWS, GCP, on-premise).
 
@@ -19,3 +19,4 @@ To view the results of the code to cloud mapping, open Microsoft Defender for Cl
 * [Microsoft Defender for DevOps](https://aka.ms/DfDdocs)
 * [Microsoft Defender for Cloud](https://aka.ms/mdc)
 * [Microsoft Security DevOps Azure DevOps Extension](https://aka.ms/msdo-azdevops)
+* [Map container images from code to cloud](https://aka.ms/containermapping)
